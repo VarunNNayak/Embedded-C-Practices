@@ -1,0 +1,18 @@
+#include
+#include<reg51.h>
+Sbit LED = P2^3;
+Main();
+{
+LED = 0x0ff
+Delay();
+LED=0x00;
+}
+#define
+#include<reg51.h>
+#define LED P0
+Main();
+{
+LED = 0x0ff
+Delay();
+LED=0x00;
+}
