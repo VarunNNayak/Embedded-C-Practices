@@ -1,0 +1,34 @@
+#include<reg51.h>
+void main(void)
+    {
+        loop:P1=0xFF;                 // send all 1’s to P1             
+        while(P1==0xFF);            // remain within loop till key is not pressed
+         switch(P1)                    // when key pressed detect is
+             {
+                 case 0xFE: 
+                       P0=0xF9; // and display digit from 1 to 8
+                       break;
+                  case 0xFD: 
+                       P0=0xA4;
+                       break;
+                  case 0xFB: 
+                       P0=0xB0;
+                       break;
+                  case 0xF7: 
+                       P0=0x99;
+                        break;
+                  case 0xEF: 
+                       P0=0x92;
+                       break;
+                   case 0xDF: 
+                       P0=0x82;
+                        break;
+                  case 0xBF: 
+                        P0=0xF8;
+                        break;
+                   case 0x7F: 
+                        P0=0x80; 
+                        break;
+                    }
+               goto loop;
+        }
